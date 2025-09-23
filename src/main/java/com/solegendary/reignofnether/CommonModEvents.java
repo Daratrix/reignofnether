@@ -74,11 +74,11 @@ public class CommonModEvents {
         evt.registerEntityRenderer(EntityRegistrar.VILLAGER_UNIT.get(), VillagerUnitRenderer::new);
         evt.registerEntityRenderer(EntityRegistrar.MILITIA_UNIT.get(), VillagerUnitRenderer::new);
         evt.registerEntityRenderer(EntityRegistrar.ZOMBIE_VILLAGER_UNIT.get(), ZombieVillagerUnitRenderer::new);
-        evt.registerEntityRenderer(EntityRegistrar.PILLAGER_UNIT.get(), PillagerUnitRenderer::new);
-        evt.registerEntityRenderer(EntityRegistrar.VINDICATOR_UNIT.get(), VindicatorUnitRenderer::new);
+        evt.registerEntityRenderer(EntityRegistrar.PILLAGER_UNIT.get(), PlayerColorRenderer.layer(PillagerUnitRenderer::new));
+        evt.registerEntityRenderer(EntityRegistrar.VINDICATOR_UNIT.get(), PlayerColorRenderer.layer(VindicatorUnitRenderer::new));
         evt.registerEntityRenderer(EntityRegistrar.IRON_GOLEM_UNIT.get(), IronGolemRenderer::new);
-        evt.registerEntityRenderer(EntityRegistrar.WITCH_UNIT.get(), WitchRenderer::new);
-        evt.registerEntityRenderer(EntityRegistrar.EVOKER_UNIT.get(), EvokerUnitRenderer::new);
+        evt.registerEntityRenderer(EntityRegistrar.WITCH_UNIT.get(), PlayerColorRenderer.layer(WitchRenderer::new));
+        evt.registerEntityRenderer(EntityRegistrar.EVOKER_UNIT.get(), PlayerColorRenderer.layer(EvokerUnitRenderer::new));
         evt.registerEntityRenderer(EntityRegistrar.ENDERMAN_UNIT.get(), EndermanRenderer::new);
         evt.registerEntityRenderer(EntityRegistrar.WARDEN_UNIT.get(), WardenRenderer::new);
         evt.registerEntityRenderer(EntityRegistrar.RAVAGER_UNIT.get(), RavagerRenderer::new);
